@@ -1,11 +1,17 @@
-<!DOCTYPE html>
 <html>
-<head><title>Test Freeze</title></head>
-<body>
-  <script>
-    while(true) {
-      new Array(1000000).fill(0);
-    }
-  </script>
-</body>
+  <head>
+    <style>
+      body {
+        transition: background-color 1s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let colors = ["#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#FF33A6"];
+      setInterval(() => {
+        document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      }, 1000);
+    </script>
+  </body>
 </html>
